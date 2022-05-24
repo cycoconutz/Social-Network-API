@@ -12,7 +12,7 @@ module.exports = {
         return res.json(userObj);
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err); 
         return res.status(500).json(err);
       });
   },
@@ -34,7 +34,7 @@ module.exports = {
         return res.status(500).json(err);
       });
   },
-  // create a new user
+  // Create a new user
   createUser(req, res) {
     User.create(req.body)
       .then((user) => res.json(user))
